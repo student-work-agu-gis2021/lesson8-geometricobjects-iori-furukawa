@@ -74,6 +74,12 @@ except Exception as e:
 
 
 # YOUR CODE HERE 4 to define create_poly_geom()
+def create_poly_geom():
+  assert type(coords)==list,"Input should be a list!"
+  assert len(coords)>=3,"Polygon object requires at least three Points!"
+for i in coords:
+  assert type(coords[i])==tuple,"All list values should be coordinate tuple!"
+return Polygon(coords)
 
 # Demonstrate the usage of the function. For example, create a Polygon with three points: `(45.2, 22.34)`, `(100.22, -3.20)` & `(70.0, 10.20)`.
 
