@@ -11,7 +11,7 @@
 
 from shapely.geometry import Point, LineString, Polygon
 #YOUR CODE HERE 1 to define create_point_geom()
-def create_point_geom(x_coord,y_ccord):
+def create_point_geom(x_coord,y_coord):
   return Point(x_coord,y_coord)
 
 # Test your function by running these code cells:
@@ -77,9 +77,10 @@ except Exception as e:
 def create_poly_geom():
   assert type(coords)==list,"Input should be a list!"
   assert len(coords)>=3,"Polygon object requires at least three Points!"
-for i in coords:
-  assert type(coords[i])==tuple,"All list values should be coordinate tuple!"
-return Polygon(coords)
+  for i in coords:
+    assert type(coords[i])==tuple,"All list values should be coordinate tuple!"
+  poly=Polygon(coords)
+  return poly
 
 # Demonstrate the usage of the function. For example, create a Polygon with three points: `(45.2, 22.34)`, `(100.22, -3.20)` & `(70.0, 10.20)`.
 
