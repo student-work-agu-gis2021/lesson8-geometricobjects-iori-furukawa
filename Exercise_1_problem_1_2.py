@@ -74,7 +74,7 @@ except Exception as e:
 
 
 # YOUR CODE HERE 4 to define create_poly_geom()
-def create_poly_geom():
+def create_poly_geom(coords):
   assert type(coords)==list,"Input should be a list!"
   assert len(coords)>=3,"Polygon object requires at least three Points!"
   for i in coords:
