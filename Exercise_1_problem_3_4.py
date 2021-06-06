@@ -163,6 +163,11 @@ def create_od_lines(point1,point2):
     od_lines.append(LineString([(orig.x,orig.y)],[(dest.x,dest.y)]))
   return od_lines
 
+def calculate_total_distance(lines):
+  total_distance=0
+  for lines in lines:
+    total_distance+=line.length
+  return total_distance
 # CODE FOR TESTING YOUR SOLUTION
 
 # Use the functions
