@@ -11,6 +11,8 @@
 # YOUR CODE HERE 1 to read the file
 #raise NotImplementedError()
 import pandas as pd 
+fp='data/travelTimes_2015_Helsinki.txt'
+data=pd.read_csv(fp,header=0,sep=';')
 
 #Check how many rows and columns there are:
 data
