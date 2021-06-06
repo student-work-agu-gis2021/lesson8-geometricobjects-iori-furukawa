@@ -27,7 +27,7 @@ print(data.head())
 # 
 
 # YOUR CODE HERE 2 to set `data`
-
+data=data.filter(['from_x','from_y','to_x','to_y'])
 # CODE FOR TESTING YOUR SOLUTION
 print(list(data.columns))
 
