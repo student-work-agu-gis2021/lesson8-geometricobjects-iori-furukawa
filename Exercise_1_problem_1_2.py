@@ -146,6 +146,9 @@ except Exception as e:
 #    - Inside the function, you should first check with `assert` -functionality that the input is a Shapely Polygon geometry (see [lesson 6](https://geo-python.github.io/site/lessons/L6/interpreting-errors.html#assertions) and [hints](https://automating-gis-processes.github.io/site/develop/lessons/L1/exercise-1.html#hints)). If something else than a list is passed for the function, you should return an Error message: `"Input should be a Shapely Polygon -object!"`
 
 # YOUR CODE HERE 8 to define get_area()
+def get_area(poly):
+  assert type(poly)==Polygon,"Input should be a Shapely geometry!"
+  return poly.area
 
 # Test and demonstrate the usage of the function:
 get_area(poly1)
